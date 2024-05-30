@@ -1,10 +1,10 @@
 
 export const getClosestPharmacy = (pharmacies, userLocation) => {
     let closestLocation = pharmacies[0];
-    let shortestDistance = calculateDistance(userLocation, pharmacies[0].location);
+    let shortestDistance = calculateDistance(userLocation, pharmacies[0]);
   
     for (let i = 1; i < pharmacies.length; i++) {
-      const distance = calculateDistance(userLocation, pharmacies[i].location);
+      const distance = calculateDistance(userLocation, pharmacies[i]);
       if (distance < shortestDistance) {
         shortestDistance = distance;
         closestLocation = pharmacies[i];

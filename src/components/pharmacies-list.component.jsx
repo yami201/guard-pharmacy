@@ -8,9 +8,9 @@ const PharmaciesList = ({ pharmacies }) => {
 
   const handleRedirection = (pharmacy) => {
     if(location) {
-      getRoute(location, pharmacy.location)
+      getRoute(location, pharmacy)
     } else {
-      getDestination(pharmacy.location)
+      getDestination(pharmacy)
     }
   }
 
@@ -21,7 +21,7 @@ const PharmaciesList = ({ pharmacies }) => {
           <div className="w-3/4">
             <h3 className="text-lg ">{pharmacy.name}</h3>
             <p className="text-sm text-gray-600">{pharmacy.adress}</p>
-            <span>{pharmacy.city}</span>
+            <span>{pharmacy?.city}</span>
           </div>
           <button onClick={handleRedirection.bind(null,pharmacy)} className="w-1/4 border text-sm border-primary px-2 py-1 rounded-lg shadow transition duration-300 text-primary hover:text-white hover:bg-primary">View in Maps</button>
         </li>

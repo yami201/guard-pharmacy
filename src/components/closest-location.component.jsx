@@ -22,7 +22,7 @@ const ClosestLocation = ({pharmacies}) => {
             {closestPharmacy && (
                 <>
                     <p  className="my-4">Closest Pharmacy to you is <span className="text-primary">{closestPharmacy.name}</span></p>
-                    <button onClick={getRoute.bind(null,location,closestPharmacy.location)} className="border border-primary px-2 py-1 rounded-lg shadow transition duration-300 text-primary hover:text-white hover:bg-primary">View in Maps</button>
+                    <button onClick={getRoute.bind(null,location,closestPharmacy)} className="border border-primary px-2 py-1 rounded-lg shadow transition duration-300 text-primary hover:text-white hover:bg-primary">View in Maps</button>
                 </>
             ) }
 
